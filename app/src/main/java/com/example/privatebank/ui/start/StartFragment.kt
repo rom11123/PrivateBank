@@ -14,9 +14,12 @@ import com.example.privatebank.ui.start.adapter.BeznalAdapter
 
 class StartFragment : BaseFragment() {
 
-    private var recyclerView: RecyclerView? = null
+
+//    private lateinit var recyclerView: RecyclerView
+//    private lateinit var stAdapter: BeznalAdapter
+    private var recyclerView:RecyclerView? = null
+    private var stAdapter = BeznalAdapter()
     private lateinit var viewModel: StartViewModel
-    private var bezNalAdapter = BeznalAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,13 +36,17 @@ class StartFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        recyclerView = view.findViewById(R.id.recyclerView)
-        recyclerView?.adapter = bezNalAdapter
+//        recyclerView = view.findViewById(R.id.recyclerView)
+//        stAdapter = BeznalAdapter()
+//        recyclerView.adapter = stAdapter
+        recyclerView = view.findViewById<RecyclerView?>(R.id.recyclerView).apply {
+            adapter = stAdapter
+        }
         viewModel.getMoney()
-      viewModel.liveData.observe(viewLifecycleOwner, Observer {list ->
-          list.body()?.let { bezNalAdapter.update(it) }
+        viewModel.liveData.observe(viewLifecycleOwner, Observer { list ->
+            list.body()?.let { stAdapter.update(it) }
 
-      })
+        })
 
     }
 

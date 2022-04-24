@@ -32,8 +32,6 @@ private var items = emptyList<BezNalDtoItem>()
     inner class BeznalViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind(item: BezNalDtoItem) {
-
-            itemView.item_base_ccy.text = item.baseCcy
             itemView.item_ccy.text = item.ccy
             itemView.item_buy.text = item.buy
             itemView.item_sale.text = item.sale

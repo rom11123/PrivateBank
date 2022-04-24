@@ -9,5 +9,5 @@ import retrofit2.http.GET
 interface ApiService {
 
     @GET("p24api/pubinfo?exchange&json&coursid=11")
-     fun getBezNal(): Response<BezNalDto>
+    suspend fun getBezNal(): Response<BezNalDto>
 }
