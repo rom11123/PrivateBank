@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/item_base_ccy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ccy" />
+
+    <TextView
+        android:id="@+id/item_buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="ccy" />
+
+    <TextView
+        android:id="@+id/item_ccy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+
+        android:text="ccy" />
+
+    <TextView
+        android:id="@+id/item_sale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="ccy" />
+
+</androidx.cardview.widget.CardView>
